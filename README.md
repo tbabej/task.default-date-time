@@ -14,6 +14,15 @@ git clone https://github.com/tbabej/taskwarrior-default-date-time-hook.git
 cp taskwarrior-default-date-time-hook/on-* ~/.task/hooks/
 ```
 
+This hook leverages tasklib, so you need to install that too:
+
+```
+sudo pip install --force git+git://github.com/tbabej/tasklib@localized_timestamps
+```
+
+Note: temporarily use my localized_timestamps branch, the currently released
+version of the tasklib does not have all the goodies :)
+
 Configuration
 -------------
 
