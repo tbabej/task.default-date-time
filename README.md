@@ -9,6 +9,9 @@ using only dates.
 Install
 -------
 
+Note: This hook has been rewritten to leverage taskpirate, for greater hook efficiency.
+Please see https://github.com/tbabej/taskpirate for instructions. Don't worry, it's straightforward.
+
 ```
 git clone https://github.com/tbabej/taskwarrior-default-date-time-hook.git
 cp taskwarrior-default-date-time-hook/on-* ~/.task/hooks/
