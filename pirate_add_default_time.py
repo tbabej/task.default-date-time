@@ -19,11 +19,12 @@ def is_local_midnight(timestamp):
     return tmp.time() == time(0, 0, 0)
 
 def set_default_time(timestamp):
-    return timestamp.astimezone(local_zone).replace(
+    tmp = timestamp.replace(
         hour=DEFAULT_TIME.hour,
         minute=DEFAULT_TIME.minute,
         second=DEFAULT_TIME.second,
         )
+    return DEFAULT_ZONE.localize(tmp).astimezone(utc)
 
 def hook_default_time(task):
     if task['due'] and is_local_midnight(task['due']):
