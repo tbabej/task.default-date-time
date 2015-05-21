@@ -23,7 +23,7 @@ def set_default_time(timestamp):
         hour=DEFAULT_TIME.hour,
         minute=DEFAULT_TIME.minute,
         second=DEFAULT_TIME.second,
-        )
+        ) + timedelta(days=1)
     return DEFAULT_ZONE.localize(tmp).astimezone(utc)
 
 def hook_default_time(task):
