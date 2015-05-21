@@ -15,7 +15,8 @@ else:
     DEFAULT_TIME = time(0, 0, 0, 0, DEFAULT_ZONE)
 
 def is_local_midnight(timestamp):
-    return timestamp.astimezone(local_zone).time() == time(0,0,0)
+    tmp = utc.localize(timestamp).astimezone(DEFAULT_ZONE)
+    return tmp.time() == time(0, 0, 0)
 
 def set_default_time(timestamp):
     return timestamp.astimezone(local_zone).replace(
