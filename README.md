@@ -13,8 +13,7 @@ Note: This hook has been rewritten to leverage taskpirate, for greater hook effi
 Please see https://github.com/tbabej/taskpirate for instructions. Don't worry, it's straightforward.
 
 ```
-git clone https://github.com/tbabej/taskwarrior-default-date-time-hook.git
-cp taskwarrior-default-date-time-hook/on-* ~/.task/hooks/
+git clone https://github.com/tbabej/taskwarrior-default-date-time-hook.git ~/.task/hooks/default-time
 ```
 
 This hook leverages tasklib, so you need to install that too:
