@@ -22,16 +22,22 @@ This hook leverages tasklib, so you need to install that too:
 pip --user install tasklib
 ```
 
+You’ll also need to install the [taskw library](https://github.com/ralphbean/taskw/tree/develop), hich allows us to read the configuration file:
+
+```
+git clone -b develop https://github.com/ralphbean/taskw.git
+cp -r taskw/taskw ~/.local/lib/python2.7/site-packages/
+```
+
 Configuration
 -------------
 
-Edit both scripts and set ```LOCAL_TZ``` to your timezone and your desired
-local ```DEFAULT_TIME```. For EST, default task date time of 21:30, it should look
-as follows::
+Configure the timezone and default time with ```task config```:
 
 ```
-LOCALTZ = pytz.timezone('EST')  # Your timezone
-DEFAULT_TIME = time(21,30,0)  # Your wanted default time
+task config default.time 22:00
+task config default.timezone Europe/Madrid
+
 ```
 
 Example of usage
