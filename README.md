@@ -25,12 +25,10 @@ pip --user install tasklib
 Configuration
 -------------
 
-Edit both scripts and set ```LOCAL_TZ``` to your timezone and your desired
-local ```DEFAULT_TIME```. For EST, default task date time of 21:30, it should look
-as follows::
+Edit the script and set your desired default time (in your local timezone).
+For default task date time of 21:30, it should look as follows:
 
 ```
-LOCALTZ = pytz.timezone('EST')  # Your timezone
 DEFAULT_TIME = time(21,30,0)  # Your wanted default time
 ```
 
