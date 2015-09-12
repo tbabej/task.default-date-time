@@ -1,6 +1,6 @@
 #!/usr/bin/python
 from datetime import time
-from tasklib.task import Task, local_zone
+from tasklib import Task, local_zone
 
 DEFAULT_TIME = time(22,0,0)  # Your wanted default time
 
