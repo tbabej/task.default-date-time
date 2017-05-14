@@ -1,4 +1,5 @@
 #!/usr/bin/python
+from __future__ import print_function
 from datetime import time
 from tasklib import Task, local_zone
 
@@ -17,4 +18,4 @@ def set_default_time(timestamp):
 def hook_default_time(task):
     if task['due'] and is_local_midnight(task['due']):
         task['due'] = set_default_time(task['due'])
-        print "Default due time has been set."
+        print("Default due time has been set.")
