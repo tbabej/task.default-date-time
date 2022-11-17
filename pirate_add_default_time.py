@@ -1,16 +1,17 @@
 #!/usr/bin/python
 from __future__ import print_function
 from datetime import datetime, time
-from tasklib import Task
+from tasklib import Task, TaskWarrior
 
-DEFAULT_TIME = time(22,0,0)  # Your wanted default time
+tw = TaskWarrior()
+local_zone = datetime.now().astimezone().tzinfo
+
+DEFAULT_TIME = datetime.strptime(tw.config.get("default.duetime", "22:00"), "%H:%M")
 
 def is_local_midnight(timestamp):
-    local_zone = datetime.now().astimezone().tzinfo
     return timestamp.astimezone(local_zone).time() == time(0,0,0)
 
 def set_default_time(timestamp):
-    local_zone = datetime.now().astimezone().tzinfo
     return timestamp.astimezone(local_zone).replace(
         hour=DEFAULT_TIME.hour,
         minute=DEFAULT_TIME.minute,
