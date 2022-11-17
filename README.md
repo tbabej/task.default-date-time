@@ -32,6 +32,12 @@ For default task date time of 21:30, it should look as follows:
 DEFAULT_TIME = time(21,30,0)  # Your wanted default time
 ```
 
+Alternatively, configure the default due time (`HH:MM` format) in your `.taskrc` as follows:
+
+```
+task config default.duetime 21:30
+```
+
 Example of usage
 ----------------
 
